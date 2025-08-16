@@ -14,11 +14,11 @@ Available functions:
 - [RetrieveVersion](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/retrieveversion?view=dataverse-latest)
 - [WhoAmI](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/whoami?view=dataverse-latest)
 
-This repository it is also a good exercise on how to hande Custom APIs types and call Dataverse Functions.
+This repository it is also a good exercise on how to handle Custom APIs types and call Dataverse Functions.
 
 Notes:
 - The RetrieveAvailableLanguages returns a String array instead of an Int array (as the Int array type is not available as Custom API type)
 - the GetTimeZoneCodeByLocalizedName requires a parameter called "LocalizedStandardName", the string refers to a notation used by SQL Server, you can find a list of values [here](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-configure-time-zone-2019?view=sql-server-ver17#sql-server-2019-cu-20-and-later-versions) ("Windows time zone" column)
 - Enum types have been mapped as Int (for example RetrieveCurrentOrganization Function requires an enum input of type [EndpointAccessType](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/endpointaccesstype?view=dataverse-latest))
 - Some Dataverse Functions return a complex type, in this case the values are returned as JSON (for example "Endpoints" of RetrieveCurrentOrganization and EntityRecordCountCollection of RetrieveTotalRecordCount
-- The Dataverse Function RetrieveTotalRecordCount is bugged, has been added because it is a good example on Custom API types
+- The Dataverse Function RetrieveTotalRecordCount is bugged, has been added because it is a good example of Custom API types
